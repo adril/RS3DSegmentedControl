@@ -28,6 +28,8 @@
 
 @property(nonatomic,assign) NSUInteger selectedSegmentIndex;
 
+@property (nonatomic, strong) UIFont *font;
+
 @end
 
 

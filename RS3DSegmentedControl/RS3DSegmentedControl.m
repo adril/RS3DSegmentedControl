@@ -111,7 +111,7 @@
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor whiteColor];
-        label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:15];
+        label.font = self.font;
         label.textAlignment = NSTextAlignmentCenter;
         label.tag = 1;
         
@@ -197,6 +197,13 @@
     [_delegate didSelectSegmentAtIndex:carousel.currentItemIndex segmentedControl:self];
 }
 
+
+- (UIFont *)font {
+	if (_font == nil) {
+		_font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:15];
+	}
+	return _font;
+}
 
 
 @end
